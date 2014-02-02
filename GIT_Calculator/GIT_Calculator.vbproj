@@ -81,9 +81,18 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\UserDB.mdf" />
+    <Content Include="App_Data\UserDB_log.ldf">
+      <DependentUpon>UserDB.mdf</DependentUpon>
+    </Content>
     <Content Include="calculator.aspx" />
     <Content Include="Extendcalculator.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="login.aspx" />
+    <Content Include="UserAdd.aspx" />
+    <Content Include="UserList.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="calculator.aspx.designer.vb">
@@ -98,6 +107,13 @@
     </Compile>
     <Compile Include="Extendcalculator.aspx.vb">
       <DependentUpon>Extendcalculator.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -120,6 +136,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RPNCalculate.vb" />
+    <Compile Include="UserAdd.aspx.designer.vb">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAdd.aspx.vb">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserList.aspx.designer.vb">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserList.aspx.vb">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -3,6 +3,11 @@
     Dim monitorText As String
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Select Case Session("language")
+            Case 2
+                bt_tax.Text = "tax"
+                bt_delete.Text = "del"
+        End Select
 
     End Sub
 
