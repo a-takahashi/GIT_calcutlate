@@ -83,6 +83,9 @@ Public Class login
             Response.Redirect("~/calculator.aspx") '電卓の画面へ
         Else
             Microsoft.VisualBasic.MsgBox("IDとパスワードが一致しませんでした")
+            Session.Clear()
+            PassWordArray.Clear()
+            UserArray.Clear()
         End If
 
 
